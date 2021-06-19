@@ -1,93 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-:root{
-    --color-font: #f953c6;
-    --color-box-shadow: #E684AE;
-    --color-img-shadow: #8e9eab;
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+:root {
+  --color-font: #f953c6;
+  --color-box-shadow: #E684AE;
+  --color-img-shadow: #8e9eab;
+  --size-font-big: 36px;
+  --size-font-regular: 26px;
+  --size-font-small: 16px; }
 
-    --size-font-big: 36px;
-    --size-font-regular: 26px;
-    --size-font-small: 16px;
-}
-.container{
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center; }
 
-.items{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(400px, 1fr));
-    grid-gap: 100px;
-    padding: 50px;
-    width: 80%;
-    padding-top: 70px;
-    margin-top: 35px;
-    font-family: 'Jua', cursive;
-}
-@media screen and (max-width: 1090px){
-    .items{
-        grid-template-columns: 1fr;
-        width:100%;
-    }
-}
-
-
-.items .item {
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  grid-gap: 100px;
+  padding: 50px;
+  width: 80%;
+  padding-top: 70px;
+  margin-top: 35px;
+  font-family: 'Jua', cursive;
+  text-align: center; }
+  .items .item {
+    display: inline-block;
     background-color: white;
     margin-bottom: 70px;
     font-weight: 300;
     padding: 20px;
     border-radius: 5px;
     color: var(--color-font);
-    box-shadow:15px 15px 36px -5px var(--color-box-shadow);
-    }
-.items .item a {
-    display: grid;
-    grid-template-columns:minmax(150px, 1fr);
-    grid-gap:20px;
-    text-decoration:none;
-    color:inherit;
-}
-.item{
-    transition: transform 300ms ease;
-}
-.item:hover{
-    transform: translateY(-30px);
-}
-.item img {
+    box-shadow: 15px 15px 36px -5px var(--color-box-shadow); }
+    .items .item a {
+      display: grid;
+      grid-template-columns: minmax(0px, 1fr);
+      grid-gap: 20px;
+      text-decoration: none;
+      color: inherit; }
+
+@media screen and (max-width: 1090px) {
+  .items {
+    grid-template-columns: 1fr;
+    width: 100%; } }
+
+.item {
+  transition: transform 300ms ease; }
+  .item:hover {
+    transform: translateY(-30px); }
+  .item img {
     position: relative;
-    top : -50px;
-    max-width: 250px;
-    width: 100%;
-    margin-right: 30px;
-    box-shadow:15px 15px 27px -10px var(--color-img-shadow);
-}
-.item .item__title, .item .item__year {
-    margin:0;
-    font-weight: 300;
-}
-.item .item__title{
+    top: -50px;
+    height: 270px;
+    width: auto;
+    margin-right: 0px;
+    box-shadow: 15px 15px 27px -10px var(--color-img-shadow); }
+  .item .item__title, .item .item__year {
+    margin: 0;
+    font-weight: 300; }
+  .item .item__title {
     margin-bottom: 5px;
     font-size: var(--size-font-big);
-    color: var(--color-font);
-}
-.item .movie__genres {
+    color: var(--color-font); }
+  .item .movie__genres {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
     margin: 5px 0px;
-    font-size: var(--size-font-big)
-}
-.movie__genres li,
-.item .item__year {
-    margin-right: 10px;
-    font-size: var(--size-font-small);
-}
-.item__link{
-    font-size: var(--size-font-regular);
-}
-.item__genre, .movie__link{
-    font-size: var(--size-font-regular);
-}
+    font-size: var(--size-font-big); }
+
+.movie__genres li, .item .item__year {
+  margin-right: 10px;
+  font-size: var(--size-font-small); }
+
+.item__link {
+  font-size: var(--size-font-regular); }
+
+.item__genre, .movie__link {
+  font-size: var(--size-font-regular); }
+
+.btnContainer {
+  display: block;
+  width: 100%;
+  text-align: center; }
+
+.btn {
+  display: inline-block;
+  width: 140px;
+  height: 50px;
+  border: 2px solid #f953c6;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 0 40px 0; }
+  .btn a {
+    font-family: arial;
+    font-size: 16px;
+    color: #f953c6;
+    text-decoration: none;
+    line-height: 50px;
+    transition: all .5s ease;
+    z-index: 2;
+    position: relative; }
+  .btn .btn-eff {
+    width: 140px;
+    height: 50px;
+    top: -2px;
+    right: -140px;
+    background: #f953c6;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 1; }
+  .btn:hover .btn-eff {
+    right: 0; }
+  .btn:hover a {
+    color: #fff; }
