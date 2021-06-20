@@ -11,5 +11,5 @@
 **Project is running at http://loaclhost:8080/** 링크를 [ctrl + Click]하면 해당 웹페이지로 브라우저를 띄운다.
 
 # 수정 사항
-2021.06.xx added Na [ Main Page 생성 및 작업 ] 
-2021.06.19 modified Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
+- 2021.06.xx added Na [ Main Page 생성 및 작업 ]   
+- 2021.06.19 modified Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
