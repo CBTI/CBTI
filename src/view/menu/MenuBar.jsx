@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { LoginOutlined, HomeOutlined, UserAddOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 const { SubMenu } = Menu;
@@ -14,8 +15,10 @@ const MenuBar = () => {
             style={{float:'left'}}>
                
             <div className="left_menu">
-              <SubMenu key="sub1" icon={<HomeOutlined />} title="메인 페이지">
-              </SubMenu>
+              <Link to="/">
+                <SubMenu key="sub1" icon={<HomeOutlined />} title="메인 페이지">
+                </SubMenu>
+              </Link>
             </div>
           </Menu>
           {/* 오른쪽 메뉴 : 로그인/로그아웃, 회원가입, 업로드 */}
