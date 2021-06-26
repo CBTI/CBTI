@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import '../../../public/background.css';     // 왜 css파일을 import하지 않아도 적용이 되는 이유는 무엇일까..
 // import './DetailPage.css';
+import { Row, Col } from 'antd'; 
 import MenuBar from '../menu/MenuBar'
 
 const DetailPage = (props) => {
@@ -11,9 +12,10 @@ const DetailPage = (props) => {
         setTemp(state);
     }, [])
     
+    // 테스트 이미지 <img src={require('./img/cbti.jpg)} alt="alt" title='title'/>
     return (
-        <>
-            <MenuBar/>
+        <> 
+        <MenuBar/>
             <section className = "container">
                 <div className = "items"> 
                     <div key={temp.title + temp.author}className="item">
