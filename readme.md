@@ -18,5 +18,5 @@ ex) npx node-sass ./src/view/searchBox/SearchBox.scss ./src/view/searchBox/Searc
 # 수정 사항
 - 2021.06.xx added Na [ Main Page 생성 및 작업 ]   
 - 2021.06.19 modified Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
-- 2021.06.26 added file-loader,  
+- 2021.06.26 added,modified Tommy [SCSS 수정 및 file-loader 추가]  
 
