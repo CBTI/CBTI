@@ -13,6 +13,7 @@ function checkMobileDevice() {
     return false;
 }
 
+
 const Cards = () =>  {
     const [CardObjects, setCardObjects] = useState([]);
     useEffect(() => {       /// 심리테스트 데이터를 받아와서 CardObjects state에 넣는다.
@@ -24,6 +25,8 @@ const Cards = () =>  {
         setCardObjects(items);
     }, [])
 
+
+
     // PC화면에선 이미지, 제목, 장르, 만든이, 설명, 시작하기버튼, 출시일이 있고
     // 모바일화면에선 장르, 설명, 출시일을 제외한 나머지가 있습니다. 
     // 공통되는 부분들은 합치고 차이점들만 다르게 해놓은 것 뿐입니다.
@@ -31,7 +34,7 @@ const Cards = () =>  {
         return (
             <>
                 <div key={key}className="item">
-                    <Link to ={{                                                                // 라우터의 개념을 아셔야 합니다 a태그와 비슷합니다 Link 태그 내의 자식요소를 클릭 시 
+                    <Link to ={{                                                                // 라우터의 개념을 아셔야 합니다 a태그와 비슷합니다 Link to 내의 자식요소를 클릭 시 
                         pathname: '/detail-page',                                               // 해당 pathname으로 url이 변경되며
                         state:{key, imgsrc, title, years, author, summary, link, testType},     // state 인자는 해당 컴포넌트에 props로 데이터를 주는 것입니다. DetailPage.jsx을 참고하십쇼
                     }}>
@@ -63,6 +66,7 @@ const Cards = () =>  {
         );
     }
 
+
     return (                                    // 랜더링 안에 코드가 짧아지니 살짝 빨라진거같지 않습니까? 사실 저도 잘 모르겠습니다. 근데 가독성은 좋아보입니다.
         <section className = "container">
             <div className = "items"> 
@@ -81,5 +85,7 @@ const Cards = () =>  {
         </section>
     )
 }
+
+
 
 export default Cards;

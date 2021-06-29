@@ -13,9 +13,17 @@
 # SCSS 사용법
 npx node-sass fileName.scss filename.css
 : node-sass를 이용해서 fileName.scss를 filename.css로 변환
-ex) npx node-sass ./src/view/searchBox/SearchBox.scss ./src/view/searchBox/SearchBox.css
+- npx node-sass ./src/view/searchBox/SearchBox.scss ./src/view/searchBox/SearchBox.css
+- npx node-sass ./src/view/menu/MenuBar.scss ./src/view/menu/MenuBar.css
+- npx node-sass ./src/view/DetailPage/DetailPage.scss ./src/view/DetailPage/DetailPage.css
+
+
+# 에러 사항
+- DetailPage에서 새로고침(F5) 시, title을 찾지 못하여 에러가 나는 문제.
+- menuBar를 늘렸다가 width:844px 미만으로 내려가면 메뉴 모음으로 바뀐 상태에서 width: 855px으로 늘리면 menuBar가 사라지는 문제.
 
 # 수정 사항
-- 2021.06.xx added Na [ Main Page 생성 및 작업 ]   
-- 2021.06.19 modified Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
-- 2021.06.25 added Na [ DetailPage 생성 및 라우터 분배, 검색창 추가 및 Cards.jsx 코드 수정]
+- 2021.06.xx Na [ Main Page 생성 및 작업 ]   
+- 2021.06.19 Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
+- 2021.06.26,29 Tommy [ MenuBar 수정 및 (테스트)로고 삽입(클릭시 메인 화면 이동), SearchBox 수정]  
+

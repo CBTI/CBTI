@@ -11,19 +11,26 @@ const SearchBox = () => {
   const onChangeInput = (e) => {
     setInputData(e.target.value);
   }
-  const onMouseButton = () => {
-    setIsButtonClicked(true);
-    const btn = document.querySelector('#to-top');
-    btn.style.transition = "transform 300ms ease";
-    btn.style.transform = "translateX(-360px)";
-  }
-  const showInput = () => {
+
+  const onClickSearch = () => {
+    if(IsButtonClicked) {
       setIsButtonClicked(false);
       const btn = document.querySelector('#to-top');
       btn.style.transition = "transform 300ms ease";
       btn.style.transform = "translateX(0px)";
-    
+    } else {
+      setIsButtonClicked(true);
+      const btn = document.querySelector('#to-top');
+      btn.style.transition = "transform 300ms ease";
+      if(window.innerWidth > 400) {
+        btn.style.transform = "translateX(-360px)";
+      } else {
+        btn.style.transform = "translateX(-220px)";
+      }
+      
+    }
   }
+
   const onEnter = (e) => {
     e.preventDefault();
     // 여기에 엔터키를 입력 시 검색어에 해당된 심리테스트를 불러오는 로직을 구현해야한다 
@@ -31,8 +38,8 @@ const SearchBox = () => {
   return (
     <>
     <form onSubmit={onEnter}>
-      <Button id="to-top">
-        <SearchOutlined onClick={() => showInput()} onMouseOver={() => onMouseButton()}/>
+      <Button id="to-top" onClick={() => onClickSearch()}>
+        <SearchOutlined />
       </Button>
       {IsButtonClicked &&
         <div>
