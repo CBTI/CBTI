@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(400px, 1fr));
   grid-gap: 100px;
-  padding: 50px;
+  padding: 50px 20px 50px 20px;
   width: 80%;
   padding-top: 70px;
   margin-top: 35px;
@@ -32,7 +32,7 @@
     color: var(--color-font);
     box-shadow: 15px 15px 36px -5px var(--color-box-shadow); }
     .items .item a {
-      display: grid;
+      display: block;
       grid-template-columns: minmax(0px, 1fr);
       grid-gap: 20px;
       text-decoration: none;
@@ -50,7 +50,8 @@
   .item img {
     position: relative;
     top: -50px;
-    height: 270px;
+    max-width: 250px;
+    height: auto;
     width: auto;
     margin-right: 0px;
     box-shadow: 15px 15px 27px -10px var(--color-img-shadow); }
@@ -61,7 +62,7 @@
     margin-bottom: 5px;
     font-size: var(--size-font-big);
     color: var(--color-font); }
-  .item .movie__genres {
+  .item .item__genres {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -70,14 +71,14 @@
     margin: 5px 0px;
     font-size: var(--size-font-big); }
 
-.movie__genres li, .item .item__year {
+.item__genres li, .item .item__year {
   margin-right: 10px;
   font-size: var(--size-font-small); }
 
 .item__link {
   font-size: var(--size-font-regular); }
 
-.item__genre, .movie__link {
+.item__genre, .item__link {
   font-size: var(--size-font-regular); }
 
 .btnContainer {

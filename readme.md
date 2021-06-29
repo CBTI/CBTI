@@ -1,34 +1,29 @@
-### 본 원격저장소 사용법
+# 본 원격저장소 사용법
 
-##### node.js 설치를 하시고 vscode에서 작업하는 것을 추천한다.
+## node.js 설치를 하시고 vscode에서 작업하는 것을 추천한다.
 
-![화면 캡처 2021-06-17 190621](https://user-images.githubusercontent.com/53801395/122376423-1ab8cb00-cf9f-11eb-9050-7b8b5e7adf76.jpg)
+> - Cntr + Shift + ` : 터미널 열기
+> - npm i : package.json 설치
+> - npm run dev : 실행 명령어 ("script" 참조)
 
-폴더 구조는 다음과 같다. 일단 이 원격저장소를 pull을 해서 자신의 로컬저장소에 저장한 뒤 원격저장소에 있지 않은 dist, node_modules 폴더와 package-lock.json, package.json은 개인이 셋팅해야한다.
-
-+ 먼저 자신의 터미널을 켜서 CBTI 폴더로 들어와 npm init 명령어 실행한다
-    + 그러면 이것저것 입력하라는 문구가 나올텐데 그냥 엔터 막 두들기면 된다.
-    + 그럼 package.json 파일이 생성될 것이다
-  
-+ 그 다음 필요한 모듈을 설치할 차례이다.
-설치 순서는 상관없지만 뒤죽박죽으로 설치하면 헷갈릴 것이다. 각각의 npm명령어를 입력해 필요한 모듈들을 설치한다.
-npm i react react-dom --save -> npm i -D webpack webpack-cli -> 
-npm i @babel/core babel-loader -> npm i -D @babel/preset-env -> 
-npm i -D @babel/preset-react ->
-npm i -D @babel/plugin-proposal-class-properties ->
-npm i -D react-refresh ->
-npm i -D @pmmmwh/react-refresh-webpack-plugin -> 
-npm i -D webpack-dev-server ->
-npm i react-router-dom ->  npm i -D style-loader css-loader mini-css-extract-plugin -> npm i antd -> npm i @ant-design/icons
-
-+ 설치가 다 끝났으면 package.json에 들어가서 "scripts" 안에다 "dev": "webpack serve --env development" 를 사진처럼 입력한다.  
-  
-![화면 캡처 2021-06-17 191618](https://user-images.githubusercontent.com/53801395/122377949-7d5e9680-cfa0-11eb-865b-00b364ee3ef5.jpg)
-
-+ 그 다음 터미널에다 npx webpack 명령어를 실행하면 dist폴더와 함께 그 안에 app.js파일이 생성될 것이다..
-그 다음 npm run dev 명령어를 실행하면 터미널에
 ![화면 캡처 2021-06-17 191745](https://user-images.githubusercontent.com/53801395/122378199-b4cd4300-cfa0-11eb-8bba-c3292d5af458.jpg)
-+ 이렇게 Project is running at http://loaclhost:8080/으로 나올텐데 이때
- localhost:8080 ctrl를 누른 상태로 이 파란색 글씨들을 클릭해준다.
 
- + 그리고 몇십초 기다리면 결과물이 나올 것이다.
+**Project is running at http://loaclhost:8080/** 링크를 [ctrl + Click]하면 해당 웹페이지로 브라우저를 띄운다.
+
+# SCSS 사용법
+npx node-sass fileName.scss filename.css
+: node-sass를 이용해서 fileName.scss를 filename.css로 변환
+- npx node-sass ./src/view/searchBox/SearchBox.scss ./src/view/searchBox/SearchBox.css
+- npx node-sass ./src/view/menu/MenuBar.scss ./src/view/menu/MenuBar.css
+- npx node-sass ./src/view/DetailPage/DetailPage.scss ./src/view/DetailPage/DetailPage.css
+
+
+# 에러 사항
+- DetailPage에서 새로고침(F5) 시, title을 찾지 못하여 에러가 나는 문제.
+- menuBar를 늘렸다가 width:844px 미만으로 내려가면 메뉴 모음으로 바뀐 상태에서 width: 855px으로 늘리면 menuBar가 사라지는 문제.
+
+# 수정 사항
+- 2021.06.xx Na [ Main Page 생성 및 작업 ]   
+- 2021.06.19 Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
+- 2021.06.26,29 Tommy [ MenuBar 수정 및 (테스트)로고 삽입(클릭시 메인 화면 이동), SearchBox 수정]  
+
