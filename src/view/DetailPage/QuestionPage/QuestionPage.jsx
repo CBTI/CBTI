@@ -3,6 +3,17 @@ import { questionData } from '../../../data/questionData'
 import ResultPage from '../ResultPage/ResultPage'
 import './QuestionPage.css'
 let userAnswer = [];
+
+function fadein(item) {
+    item.style.opacity = "0";
+    item.animate( {
+        opacity: '1'
+    }, 550);
+    setTimeout(function() {
+        item.style.opacity = "1";
+    }, 500);
+}
+
 const QuestionPage = memo((props) => {
 
     const [MBTIIndex, setMBTIIndex] = useState(0);
@@ -23,6 +34,15 @@ const QuestionPage = memo((props) => {
     }, [])
 
     const answerToQuestion = (e) => {
+        const liList = document.querySelectorAll('.item__question__answer li');
+        const infomation = document.querySelector('.item__question__list__infomation');
+
+        for(let liItem of liList) {
+            fadein(liItem);
+        }
+        fadein(infomation);
+
+
         setQuestionIndex((prevIndex) => {
             return ++prevIndex;
         })
