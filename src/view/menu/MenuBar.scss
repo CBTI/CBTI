@@ -1,90 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 /*
 .logo {
     background-image: url('./img/cbti.jpg');
     
     background-repeat: no-repeat;
 }*/
-
-@import "~antd/dist/antd.css";
-
+@import url(~antd/dist/antd.css);
 .menuBar {
   padding: 0 20px;
   border-bottom: solid 1px #e8e8e8;
   overflow: hidden;
   box-shadow: 0 0 30px #f3f1f1;
-  position: relative;
+  position: relative; }
 
-  .logo {
-    width: 150px;
-    height: 100%;
-    background-image: url('./img/cbti.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    float: left;
-    position: absolute;
-    
-    a {
-      
-      display: inline-block;
-      text-transform: capitalize;
-      
-      width: 100%;
-      height: 100%;
-      }
-  }
+.menuBar .logo {
+  width: 150px;
+  height: 100%;
+  background-image: url("./img/cbti.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  float: left;
+  position: absolute;
+  cursor: pointer; }
 
-}
-
-
+.menuBar .logo a {
+  display: inline-block;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%; }
 
 .menuCon {
   width: 100%;
-  float: left;
+  float: left; }
 
-  .ant-menu-item {
-    padding: 0px 5px;
-  }
+.menuCon .ant-menu-item {
+  padding: 0px 5px; }
 
-  .ant-menu-submenu-title {
-    padding: 10px 20px;
-  }
+.menuCon .ant-menu-submenu-title {
+  padding: 10px 20px; }
 
-  .ant-menu-item a, .ant-menu-submenu-title a {
-    padding: 10px 15px;
-  }
+.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a {
+  padding: 10px 15px; }
 
-  .ant-menu-horizontal {
-    border-bottom: none;
-  }
+.menuCon .ant-menu-horizontal {
+  border-bottom: none; }
 
-  .leftMenu {
-    float: left;
-  }
+.menuCon .leftMenu {
+  float: left; }
 
-  .rightMenu {
-    float: right;
-  }
-}
-
+.menuCon .rightMenu {
+  float: right; }
 
 .barsMenu {
   float: right;
   height: 32px;
   padding: 6px;
-  //margin: 0px 4px 0px 4px;
   margin: 4px 0px 4px 0px;
   display: none;
-  background: none;
-}
+  background: none; }
 
 .barsBtn {
   display: block;
   width: 20px;
   height: 2px;
   background: #1890ff;
-  position: relative;
-}
+  position: relative; }
 
 .barsBtn:after,
 .barsBtn:before {
@@ -94,56 +74,41 @@
   top: -6px;
   left: 0;
   height: 2px;
-  background: #1890ff;
-}
+  background: #1890ff; }
 
 .barsBtn:after {
   top: auto;
-  bottom: -6px;
-}
+  bottom: -6px; }
 
 .ant-drawer-body {
-  padding: 0;
-}
+  padding: 0; }
 
-.barsMenu>span {
-  display: block;
-}
+.barsMenu > span {
+  display: block; }
 
-.ant-drawer-body .ant-menu-horizontal>.ant-menu-item,
-.ant-drawer-body .ant-menu-horizontal>.ant-menu-submenu {
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item,
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-submenu {
   display: inline-block;
-  width: 100%;
-}
+  width: 100%; }
 
 .ant-drawer-body .ant-menu-horizontal {
-  border-bottom: none;
-}
+  border-bottom: none; }
 
-.ant-drawer-body .ant-menu-horizontal>.ant-menu-item:hover {
-  border-bottom-color: transparent;
-}
+.ant-drawer-body .ant-menu-horizontal > .ant-menu-item:hover {
+  border-bottom-color: transparent; }
 
 @media (max-width: 767px) {
   .barsMenu {
-    display: inline-block;
-  }
-
+    display: inline-block; }
   .leftMenu,
   .rightMenu {
-    display: none;
-  }
-
+    display: none; }
   .logo a {
-    margin-left: -20px;
-  }
-
+    margin-left: -20px; }
   .menuCon .ant-menu-item,
   .menuCon .ant-menu-submenu-title {
-    padding: 1px 20px;
-  }
-
+    padding: 1px 20px; }
   .logo a {
-    padding: 10px 20px;
-  }
-}
+    padding: 10px 20px; } }
+
+/* npx node-sass ./src/view/menu/MenuBar.css ./src/view/menu/MenuBar.scss  */

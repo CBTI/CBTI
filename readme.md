@@ -25,5 +25,6 @@ npx node-sass fileName.scss filename.css
 # 수정 사항
 - 2021.06.xx Na [ Main Page 생성 및 작업 ]   
 - 2021.06.19 Tommy [ SCSS 추가 및 CSS 추가 작업 및 기타 수정 ]
+- 2021.06.25 Na [ DetailPage 생성 및 라우터 분배, 검색창 추가 및 Cards.jsx 코드 수정]
 - 2021.06.26,29 Tommy [ MenuBar 수정 및 (테스트)로고 삽입(클릭시 메인 화면 이동), SearchBox 수정]  
-
+- 20201.07.04 Na [ QuestionPage, ResultPage, data/questionData 생성 및 data/data 수정(detail_summary, key 속성 추가)]
