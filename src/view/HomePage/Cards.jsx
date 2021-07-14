@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 import './Cards.css'
 import {data} from '../../data/data'
 import { Link } from 'react-router-dom';
-import { Form, Input, Button, Checkbox } from 'antd';
-
 
 function checkMobileDevice() {
     var mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');

@@ -39,7 +39,8 @@
   .menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a {
     padding: 10px 15px; }
   .menuCon .ant-menu-horizontal {
-    border-bottom: none; }
+    border-bottom: none;
+    line-height: 36px; }
   .menuCon .leftMenu {
     float: left; }
   .menuCon .rightMenu {

@@ -55,7 +55,7 @@ const QuestionPage = memo((props) => {
             <section className = "question__container">
                 <div className="item__question">
                     {isEnd ?
-                        <ResultPage userAnswer={userAnswer}/>
+                        <ResultPage history={props.history} userAnswer={userAnswer}/>
                         :
                         <>
                             <ol className="item__question__list">

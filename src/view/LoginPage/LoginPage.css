@@ -1,0 +1,58 @@
+.login__container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login__item{
+    position:relative;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px; 
+    padding: 100px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 36px -15px var(--color-box-shadow);
+}
+.ant-form-item .ant-form-item-label{
+    width: 140px;
+    /* background: chocolate; */
+}
+.ant-col-8{
+    flex:none;
+}
+.ant-form-item-control-input-content{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+Button{
+    border-radius: 5px !important;
+    /* box-shadow: 5px 5px 10px -4px black !important; */
+    margin: 5px;
+    width:200px;
+}
+.login__item__homebutton{
+    position: absolute;
+    left:40px;
+    top:40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.login__item__homebutton:hover{
+    color:cornflowerblue;
+}
+.ant-row{
+    margin:10px;
+}
+.ant-col-offset-8{
+    margin-left: 100px;
+}
+.login__item__ButtonSpace{
+    display: flex;
+    flex-direction: row;
+}
