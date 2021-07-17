@@ -38,11 +38,14 @@ module.exports = {
     output: {
         filename: 'app.js',
         path: path.join(__dirname, 'dist'),
-        publicPath: '/dist/'
+        publicPath: '/'     // 라우트를 사용할 수 있게 해주는 코드 원래는 '/dist/'였다.
     },
     devServer: {
+        historyApiFallback: true,       // 라우트를 사용할 수 있게 해주는 코드
         publicPath: '/dist/',
         hot: true, 
     },
 
 };
+
+// 라우트를 사용하기 위한 웹팩 설정 : https://stackoverflow.com/questions/43209666/react-router-v4-cannot-get-url

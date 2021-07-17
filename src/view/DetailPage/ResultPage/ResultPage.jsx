@@ -1,5 +1,6 @@
 import React from 'react'
-
+import HomeButton from '../../../Component/HomeButton'
+import { withRouter } from 'react-router'
 function ResultPage(props) {
 
     return (
@@ -14,9 +15,10 @@ function ResultPage(props) {
                     )
                 })}
                 입니다.</p>
+                <HomeButton history={props.history}></HomeButton>
             </div>
         </>
     )
 }
 
-export default ResultPage
+export default withRouter(ResultPage)

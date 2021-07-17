@@ -3,7 +3,10 @@ import './DetailPage.css'
 import QuestionPage from './QuestionPage/QuestionPage';
 import MenuBar from '../menu/MenuBar';
 import { Button } from 'antd';
-import { RightCircleOutlined } from '@ant-design/icons';
+import { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
+import { withRouter } from "react-router";
+import BackButton from '../../Component/BackButton';
+
 const DetailPage = (props) => {
     const [temp, setTemp] = useState({});
     const [startButtonClicked, setStartButtonClicked] = useState(false);        // 시작버튼을 클릭하면 심리테스트를 시작하게 만드는 state
@@ -28,7 +31,10 @@ const DetailPage = (props) => {
                             <h3 className="detail__item__title">{temp.title} {temp.testType}</h3>
                             <p className="detail__item__genre">{temp.author}</p>
                             <p className="detail__item__summary">{temp.detail_summary}</p>
-                            <Button type="primary" icon={<RightCircleOutlined />} onClick={onClickButton} size="large">시작하기</Button>
+                            <div>
+                                <BackButton history={props.history} >뒤로가기</BackButton>
+                                <Button type="primary" icon={<RightCircleOutlined />} onClick={onClickButton} style={{ marginLeft:"10px"}}  size="large">시작하기</Button>
+                            </div>
                             </div>
                         </section>
                     </>
@@ -41,4 +47,4 @@ const DetailPage = (props) => {
     )
 }
 
-export default DetailPage;
+export default withRouter(DetailPage);
