@@ -1,4 +1,4 @@
-.login__container{
+.join__container{
     width:100vw;
     height:100vh;
     display: flex;
@@ -9,10 +9,9 @@
         border-radius: 5px !important;
         /* box-shadow: 5px 5px 10px -4px black !important; */
         margin: 5px;
-        width:200px;
+        width:90px;
     }
-
-    .login__item{
+    .join__item{
         position:relative;
         background: white;
         display: flex;
@@ -32,13 +31,14 @@
     }
     .ant-form-item-control-input-content{
         min-width: 200px;
-        display: flex;
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
-    .login__item__homebutton{
+    
+    .join__item__homebutton{
         position: absolute;
         left:40px;
         top:40px;
@@ -55,8 +55,12 @@
     .ant-col-offset-8{
         margin-left: 100px;
     }
-    .login__item__ButtonSpace{
+    .join__item__ButtonSpace{
         display: flex;
         flex-direction: row;
+    }
+    
+    .join__btnGroup {
+        padding-left: 10px;
     }
 }
