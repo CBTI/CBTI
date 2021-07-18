@@ -34,8 +34,8 @@ const LoginForm = (props) => {
           onFinishFailed={onFinishFailed}
           >
           <Form.Item
-            label="Username"
-            name="username"
+            label="User ID"
+            name="userId"
             rules={[
               {
                 required: true,
