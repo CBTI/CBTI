@@ -1,7 +1,7 @@
 import React, { useState, useEffect, memo } from 'react'
 import { questionData } from '../../../data/questionData'
 import ResultPage from '../ResultPage/ResultPage'
-import './QuestionPage.css'
+import './QuestionPage.scss'
 let userAnswer = [];
 
 function fadein(item) {

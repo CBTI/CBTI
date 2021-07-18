@@ -1,5 +1,5 @@
 import React from 'react';
-import './LoginPage.css'
+import './LoginPage.scss'
 import { LoginOutlined, GoogleOutlined, FacebookFilled, HomeOutlined, UserAddOutlined } from '@ant-design/icons';
 import { Form, Input, Button, Checkbox } from 'antd';
 import { Link } from 'react-router-dom';

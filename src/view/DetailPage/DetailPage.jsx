@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './DetailPage.css'
+import './DetailPage.scss'
 import QuestionPage from './QuestionPage/QuestionPage';
 import MenuBar from '../menu/MenuBar';
 import { Button } from 'antd';

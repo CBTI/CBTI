@@ -10,18 +10,11 @@
 
 **Project is running at http://loaclhost:8080/** 링크를 [ctrl + Click]하면 해당 웹페이지로 브라우저를 띄운다.
 
-# SCSS 사용법
-npx node-sass fileName.scss filename.css
-: node-sass를 이용해서 fileName.scss를 filename.css로 변환
-- npx node-sass ./src/view/searchBox/SearchBox.scss ./src/view/searchBox/SearchBox.css
-- npx node-sass ./src/view/menu/MenuBar.scss ./src/view/menu/MenuBar.css
-- npx node-sass ./src/view/DetailPage/DetailPage.scss ./src/view/DetailPage/DetailPage.css
-- npx node-sass ./src/view/DetailPage/QuestionPage/QuestionPage.scss ./src/view/QuestionPage/QuestionPage.css
-
 
 # 에러 사항
-- DetailPage에서 새로고침(F5) 시, title을 찾지 못하여 에러가 나는 문제.
-- menuBar를 늘렸다가 width:844px 미만으로 내려가면 메뉴 모음으로 바뀐 상태에서 width: 855px으로 늘리면 menuBar가 사라지는 문제.
+- (2021.##.##) DetailPage에서 새로고침(F5) 시, title을 찾지 못하여 에러가 나는 문제.
+- (2021.##.##) menuBar를 늘렸다가 width:844px 미만으로 내려가면 메뉴 모음으로 바뀐 상태에서 width: 855px으로 늘리면 menuBar가 사라지는 문제.
+- (2021.07.18) 모바일 뷰의 경우 로그인, 회원 가입 페이지가 맞지 않는 문제.
 
 # 수정 사항
 - 2021.06.xx Na [ Main Page 생성 및 작업 ]   
@@ -31,3 +24,6 @@ npx node-sass fileName.scss filename.css
 - 20201.07.04 Na [ QuestionPage, ResultPage, data/questionData 생성 및 data/data 수정(detail_summary, key 속성 추가)]
 - 2021.07.05 Tommy [ QuestionPage Animation 수정]
 - 2021.07.17 Na [loginPage 및 라우터 설정]
+- 2021.07.18 Tommy [joinPage 및 메뉴 라우터 연결]
+
+

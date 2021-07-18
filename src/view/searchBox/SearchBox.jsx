@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SearchBox.css'
+import './SearchBox.scss'
 import { Button, Input } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
