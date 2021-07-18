@@ -31,3 +31,5 @@ npx node-sass fileName.scss filename.css
 - 20201.07.04 Na [ QuestionPage, ResultPage, data/questionData 생성 및 data/data 수정(detail_summary, key 속성 추가)]
 - 2021.07.05 Tommy [ QuestionPage Animation 수정]
 - 2021.07.17 Na [loginPage 및 라우터 설정]
+
+

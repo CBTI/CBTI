@@ -11,7 +11,9 @@
   border-bottom: solid 1px #e8e8e8;
   overflow: hidden;
   box-shadow: 0 0 30px #f3f1f1;
-  position: relative; }
+  position: relative;
+  /* height:45px;  화면크기가 달라지면 사라지는 문제를 임시방편으로 height속성을 주었다.*/
+}
 
 .menuBar .logo {
   width: 150px;
@@ -21,35 +23,27 @@
   background-size: 100% 100%;
   float: left;
   position: absolute;
-  cursor: pointer; }
+  cursor: pointer; 
+  background-color: orange;
 
-.menuBar .logo a {
-  display: inline-block;
-  text-transform: capitalize;
-  width: 100%;
-  height: 100%; }
+}
 
 .menuCon {
   width: 100%;
   float: left; }
-
-.menuCon .ant-menu-item {
-  padding: 0px 5px; }
-
-.menuCon .ant-menu-submenu-title {
-  padding: 10px 20px; }
-
-.menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a {
-  padding: 10px 15px; }
-
-.menuCon .ant-menu-horizontal {
-  border-bottom: none; }
-
-.menuCon .leftMenu {
-  float: left; }
-
-.menuCon .rightMenu {
-  float: right; }
+  .menuCon .ant-menu-item {
+    padding: 0px 5px; }
+  .menuCon .ant-menu-submenu-title {
+    padding: 10px 20px; }
+  .menuCon .ant-menu-item a, .menuCon .ant-menu-submenu-title a {
+    padding: 10px 15px; }
+  .menuCon .ant-menu-horizontal {
+    border-bottom: none;
+    line-height: 36px; }
+  .menuCon .leftMenu {
+    float: left; }
+  .menuCon .rightMenu {
+    float: right; }
 
 .barsMenu {
   float: right;
@@ -110,5 +104,4 @@
     padding: 1px 20px; }
   .logo a {
     padding: 10px 20px; } }
-
-/* npx node-sass ./src/view/menu/MenuBar.css ./src/view/menu/MenuBar.scss  */
+    /* npx node-sass ./src/view/menu/MenuBar.css ./src/view/menu/MenuBar.scss  */

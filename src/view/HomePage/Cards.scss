@@ -36,7 +36,7 @@
         box-shadow:15px 15px 36px -5px var(--color-box-shadow);
         
         a {
-            display: block; // modified by Tommy (2021.06.26) grid -> block for move it in the center.
+            display: block;
             grid-template-columns:minmax(0px, 1fr);
             grid-gap:20px;
             text-decoration:none;

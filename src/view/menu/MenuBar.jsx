@@ -2,7 +2,7 @@ import React from 'react';
 import { LoginOutlined, HomeOutlined, UserAddOutlined } from '@ant-design/icons';
 import { Menu, Drawer, Button } from 'antd'; // added by Tommy (2021.06.26) 메뉴 정렬
 import RightMenu from './RightMenu'
-import './MenuBar.css'
+import './MenuBar.scss'
 
 const { SubMenu } = Menu;
 const { useState, useRef } = React;
