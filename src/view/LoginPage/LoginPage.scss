@@ -42,10 +42,11 @@ Button{
     top:40px;
     font-size: 20px;
     cursor: pointer;
+    &:hover{
+        color:cornflowerblue;
+    }
 }
-.login__item__homebutton:hover{
-    color:cornflowerblue;
-}
+
 .ant-row{
     margin:10px;
 }
