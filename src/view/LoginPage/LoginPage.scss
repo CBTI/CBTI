@@ -60,3 +60,9 @@
         flex-direction: row;
     }
 }
+.ant-modal-content{
+    text-align: center;
+    .ant-form-item{
+        width:400px;
+    }
+}

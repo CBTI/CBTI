@@ -11,8 +11,11 @@
   border-bottom: solid 1px #e8e8e8;
   overflow: hidden;
   box-shadow: 0 0 30px #f3f1f1;
-  position: relative;
-  /* height:45px;  화면크기가 달라지면 사라지는 문제를 임시방편으로 height속성을 주었다.*/
+  position: fixed;
+  width:100%;
+  height: 8%;
+  z-index:10;
+  background: linear-gradient(to right,#ee9ca7 ,#ffdde1);
 }
 
 .menuBar .logo {
@@ -30,6 +33,7 @@
 
 .menuCon {
   width: 100%;
+  height: 100%;
   float: left; }
   .menuCon .ant-menu-item {
     padding: 0px 5px; }
@@ -42,8 +46,12 @@
     line-height: 36px; }
   .menuCon .leftMenu {
     float: left; }
-  .menuCon .rightMenu {
-    float: right; }
+  .menuCon .rightMenu{
+    float: right;
+    height: 100%;
+    .ant-menu-light{
+      height: 100%;
+    }}
 
 .barsMenu {
   float: right;

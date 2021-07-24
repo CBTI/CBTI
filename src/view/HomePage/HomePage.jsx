@@ -9,7 +9,7 @@ const HomePage = () => {
             <MenuBar />
             <Cards />
             <SearchBox />
-            <UpButton />
+            {/* <UpButton /> */}
         </>
     )
 }
