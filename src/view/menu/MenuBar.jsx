@@ -29,8 +29,7 @@ const MenuBar = () => {
     return(
       <>
         <nav className="menuBar">
-          <div className="logo" onClick={onClickLogo}>
-          </div>
+          <div className="logo" onClick={onClickLogo}/>
           <div className="menuCon">
             <div className="rightMenu">
                 <RightMenu />

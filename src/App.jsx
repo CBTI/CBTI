@@ -6,6 +6,8 @@ import DetailPage from './view/DetailPage/DetailPage';
 import NotFoundPage from './view/NotFoundPage/NotFoundPage';
 import LoginPage from './view/LoginPage/LoginPage';
 import JoinPage from './view/JoinPage/JoinPage';
+import GoogleLogin from './view/LoginPage/GoogleLogin';
+import Upload from './view/Upload/Upload';
 
 const App = () => {
     return(
@@ -14,6 +16,8 @@ const App = () => {
         <Route path="/detail-page" component={DetailPage}/>
         <Route path="/login" component={LoginPage}/>
         <Route path="/join" component={JoinPage}/>
+        <Route path="/GoogleLogin" component={GoogleLogin}/>
+        <Route path="/upload" component={Upload}/>
         <Route component={NotFoundPage}/>
     </Switch>
     )
