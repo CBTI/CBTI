@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import "./SearchBox.scss";
 import { Button, Input } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-=======
-import React, { useState } from 'react';
-import './SearchBox.scss'
-import { Button, Input } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
->>>>>>> c14dfb5d10edbc606a552e3ccc29b21517cced56
 
 const SearchBox = () => {
   const [InputData, setInputData] = useState("");
