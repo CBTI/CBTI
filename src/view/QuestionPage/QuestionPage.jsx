@@ -1,10 +1,11 @@
 import React, { useState, useEffect, memo } from 'react'
+import { HomeOutlined }from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
 import { questionData } from '../../data/questionData'
 import { actionCreators } from '../../redux/modules/user';
 import './QuestionPage.scss'
 
-let userAnswer = [];
 
 function fadein(item) {
     item.style.opacity = "0";
@@ -15,20 +16,23 @@ function fadein(item) {
         item.style.opacity = "1";
     }, 500);
 }
-
+let userAnswer = [];
 const QuestionPage = memo((props) => {
-    console.log(props);
-    const dispatch = useDispatch();
     const { history } = props;
+    const dispatch = useDispatch();
     const [MBTIIndex, setMBTIIndex] = useState(0);
     const [questionIndex, setQuestionIndex] = useState(0);
     const [endIndex, setEndIndex] = useState(0);
     const { questionArray } = questionData;
+    const question_id = sessionStorage.getItem("question_id");
 
     useEffect(() => {
-        const { questionArray } = questionData;
+        userAnswer=[];
+        const startCount = new Date().getTime();
+        sessionStorage.setItem("startCount", startCount);
+
         for(let i = 0; i < questionArray.length; i++){
-            if(questionArray[i].key === props.Key){
+            if(questionArray[i].key === question_id){
                 setMBTIIndex(i);
                 setEndIndex(questionArray[i].questions.length);
                 break;
@@ -39,20 +43,21 @@ const QuestionPage = memo((props) => {
     const answerToQuestion = (e) => {
         const liList = document.querySelectorAll('.item__question__answer li');
         const infomation = document.querySelector('.item__question__list__infomation');
-
+        userAnswer = [...userAnswer, e.target.dataset.value];
+        setQuestionIndex((prevIndex) => {
+            return ++prevIndex;
+        })
         for(let liItem of liList) {
             fadein(liItem);
         }
         fadein(infomation);
 
-        setQuestionIndex((prevIndex) => {
-            return ++prevIndex;
-        })
+        // userAnswer.push(e.target.dataset.value);
+        // console.log(e.target.dataset.value);
         if(endIndex === questionIndex + 1) {
             dispatch(actionCreators.submitAnswer(userAnswer));
-            history.replace('/result');
+            history.replace(`/result:${question_id}`);
         }
-        userAnswer.push(e.target.dataset.value);
     }
 
     return (
@@ -61,6 +66,9 @@ const QuestionPage = memo((props) => {
                 <div className="item__question">
                     <ol className="item__question__list">
                         <div className="item__question__list__infomation">
+                            <Link to="/">
+                                <HomeOutlined className="question__item__homebutton"/>
+                            </Link>
                             <li className="item__question__title">{questionArray[MBTIIndex].name}</li>
                             <li className="item__question__question">질문 : {questionArray[MBTIIndex].questions[questionIndex].question}</li>
                             <li className="item__question__question">진행률 : {questionIndex + 1}/{endIndex}</li>
@@ -70,6 +78,9 @@ const QuestionPage = memo((props) => {
                             <li data-value='2' onClick={answerToQuestion}>2. {questionArray[MBTIIndex].questions[questionIndex].Answer[1]}</li>
                             <li data-value='3' onClick={answerToQuestion}>3. {questionArray[MBTIIndex].questions[questionIndex].Answer[2]}</li>
                         </div>
+                        {
+                            
+                        }
                     </ol>
                 </div>
             </section>

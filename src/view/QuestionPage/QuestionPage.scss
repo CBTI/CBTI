@@ -19,7 +19,17 @@
       align-items: center;
       text-align: center;
     }
-    
+    .question__item__homebutton {
+      position: absolute;
+      left: 40px;
+      top: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        color: cornflowerblue;
+      }
+    }
+
     .item__question__title, .item__question__question, .item__result__title {
       font-size: var(--size-font-big);
     }
@@ -32,7 +42,9 @@
       list-style: none;
       animation: 1s ease 0s 1 normal none running fadein;     /* 수정해야 할 부분*/
     }
-    
+    .item__question__list__infomation{
+      position:relative;
+    }
     .item__question__list__infomation, .item__question__answer li, .item__result {
       background-color: white;
       border-radius: 15px;

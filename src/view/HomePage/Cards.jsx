@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import './Cards.scss'
+import { actionCreators } from '../../redux/modules/user';
+import { useDispatch } from 'react-redux';
+
 import {data} from '../../data/data'
-import { Link } from 'react-router-dom';
 
 function checkMobileDevice() {
     var mobileKeyWords = new Array('Android', 'iPhone', 'iPod', 'BlackBerry', 'Windows CE', 'SAMSUNG', 'LG', 'MOT', 'SonyEricsson');
@@ -14,7 +16,8 @@ function checkMobileDevice() {
 }
 
 
-const Cards = () =>  {
+const Cards = ({history}) =>  {
+    const dispatch = useDispatch();
     const [CardObjects, setCardObjects] = useState([]);
     useEffect(() => {       /// 심리테스트 데이터를 받아와서 CardObjects state에 넣는다.
         const {item} = data;
@@ -23,9 +26,13 @@ const Cards = () =>  {
             items.push(v);
         })
         setCardObjects(items);
-        console.log(CardObjects);
     }, [])
 
+    const selectQuestion = (key) => {
+        sessionStorage.setItem("question_id", key);
+        dispatch(actionCreators.selectQuestion(key));
+        history.push(`/detail:${key}`);
+    }
 
 
     // PC화면에선 이미지, 제목, 장르, 만든이, 설명, 시작하기버튼, 출시일이 있고
@@ -35,12 +42,7 @@ const Cards = () =>  {
         return (
             <>
                 <div key={key}className="item">
-                    <Link to ={{                                                                // 라우터의 개념을 아셔야 합니다 a태그와 비슷합니다 Link to 내의 자식요소를 클릭 시 
-                        pathname: '/detail-page',                                               // 해당 pathname으로 url이 변경되며
-                        state:{key, imgsrc, title, years, author, summary, detail_summary, link, testType},     // state 인자는 해당 컴포넌트에 props로 데이터를 주는 것입니다. DetailPage.jsx을 참고하십쇼
-                    }}>
-                    <img src={imgsrc} alt={title} title={title}/>                               {/* 이미지 클릭시 /detail-page로 이동 */}
-                    </Link>
+                    <img onClick={() =>selectQuestion(key)} src={imgsrc} alt={title} title={title}/>                               {/* 이미지 클릭시 /detail-page로 이동 */}
                     <h3 className="item__title">{title} {testType}</h3>
                     {!checkMobileDevice() &&                                                    /* 모바일 화면이 아니라면 작가이름과 설명을 return */
                         <>
@@ -51,12 +53,7 @@ const Cards = () =>  {
                     <div className="btnContainer">
                         <div className="btn">
                             <div className="btn-eff"></div>
-                            <Link to ={{                                                        /* 시작하기 버튼 클릭 시 /detail-page로 이동 */
-                                pathname: '/detail-page',
-                                state:{key, imgsrc, title, years, author, summary, detail_summary, link, testType},
-                            }}>
-                            <a>시작하기</a>
-                            </Link>
+                            <a onClick={() => selectQuestion(key)}>시작하기</a>
                         </div>
                     </div>
                     {!checkMobileDevice() &&                                                    /* 모바일 화면이 아니라면 출시일을 return */

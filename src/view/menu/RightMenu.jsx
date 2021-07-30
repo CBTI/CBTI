@@ -6,7 +6,7 @@ import { Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 
 const RightMenu = () => {
-  const [isLoginUser, setIsLoginUser] = useState(true);
+  const [isLoginUser, setIsLoginUser] = useState(false);
   return (
     <Menu mode="horizontal">
       {

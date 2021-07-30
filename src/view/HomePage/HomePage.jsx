@@ -3,11 +3,12 @@ import MenuBar from '../menu/MenuBar'
 import Cards from './Cards'
 import SearchBox from '../searchBox/SearchBox';
 import UpButton from '../../Component/UpButton'
-const HomePage = () => {
+const HomePage = (props) => {
+    const {history} = props;
     return(
         <>
             <MenuBar />
-            <Cards />
+            <Cards history={history}/>
             <SearchBox />
             {/* <UpButton /> */}
         </>
