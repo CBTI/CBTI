@@ -13,7 +13,7 @@
   box-shadow: 0 0 30px #f3f1f1;
   position: fixed;
   width: 100%;
-  height: 8%;
+  height: 45px;
   z-index: 10;
   background: linear-gradient(to right, #ee9ca7, #ffdde1);
 }
@@ -36,10 +36,10 @@
   float: left;
 }
 .menuCon .ant-menu-item {
-  padding: 0px 5px;
+  padding: 0px 2px;
 }
 .menuCon .ant-menu-submenu-title {
-  padding: 10px 20px;
+  padding: 6px 20px;
 }
 .menuCon .ant-menu-item a,
 .menuCon .ant-menu-submenu-title a {
@@ -52,6 +52,7 @@
 .menuCon .leftMenu {
   float: left;
 }
+
 .menuCon .rightMenu {
   float: right;
   height: 100%;

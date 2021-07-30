@@ -17,7 +17,7 @@ const LoginForm = (props) => {
 
   const onFinish = (values) => {
     console.log("Success:", values);
-  };
+  }; 
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
@@ -41,6 +41,13 @@ const LoginForm = (props) => {
   // 사용자가 이메일과 아이디를 입력 후 비밀번호를 찾는 함수
   const findPsHandleOk = () => {
     // setIsFindPSModalVisible(false);
+    const login_userId = document.querySelector("#login_userId");
+    const login_password = document.querySelector("#login_password");
+    console.log(login_userId, login_password);
+
+    //test 로그인 테스트
+    if (login_userId === "abc" && login_password === "abc") {
+    }
   };
 
   const findPsHandleCancel = () => {
@@ -54,7 +61,7 @@ const LoginForm = (props) => {
           <HomeOutlined className="login__item__homebutton" />
         </Link>
         <Form
-          name="basic"
+          name="login"
           labelCol={{
             span: 8,
           }}
