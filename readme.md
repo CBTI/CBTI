@@ -28,3 +28,4 @@
 - 2021.07.18 Tommy [joinPage 및 메뉴 라우터 연결]
 - 2021.07.24 Na [팝업 창 및 업로드 뷰 부분 완성]
 - 2021.07.25 Tommy [SearchBar 오류 수정 및 메뉴 SCSS 수정]
+- 2021.07.31 Tommy [ShareButton 추가 (url 접근 시, 현재 입장이 불가능한 현상 있음.)]
