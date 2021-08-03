@@ -9,12 +9,12 @@
     font-size: var(--size-font-regular); } 
   */
 
-  
 .detail__container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;}
+  min-height: 100vh;
+}
 
 .detail__item {
   padding: 125px 50px 125px 50px;
@@ -25,17 +25,28 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* max-height: 1000px; */ }
+  /* max-height: 1000px; */
+}
 
-.detail__item__title, .detail__item__genre, .detail__item__summary {
-  font-family: 'Jua', cursive;
-  color: var(--color-font); }
+.detail__item__title,
+.detail__item__genre,
+.detail__item__summary {
+  font-family: "Jua", cursive;
+  color: var(--color-font);
+}
 
 .detail__item__title {
-  font-size: var(--size-font-big); }
+  font-size: var(--size-font-big);
+}
 
 .detail__item__genre {
-  font-size: var(--size-font-regular); }
+  font-size: var(--size-font-regular);
+}
 
 .detail__item__summary {
-  font-size: var(--size-font-small); }
+  font-size: var(--size-font-small);
+}
+
+.shareButton {
+  margin-top: 20px;
+}

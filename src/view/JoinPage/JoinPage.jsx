@@ -12,6 +12,10 @@ const JoinPage = () => {
       const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
       };
+
+      const JoinSubmit = (e) => {
+        
+      }
     
       return (
         <div className="join__container">
@@ -110,7 +114,7 @@ const JoinPage = () => {
                 wrapperCol={{ offset: 8, span: 16 }}
                 className="join__btnGroup"
                 >
-                <Button type="primary" htmlType="submit">
+                <Button type="primary" onClick={JoinSubmit} htmlType="submit">
                     완료
                 </Button>
                 <Link to="/">

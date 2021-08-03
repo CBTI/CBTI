@@ -1,5 +1,6 @@
 import React from 'react';
 import { LoginOutlined, HomeOutlined, UserAddOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 import { Menu, Drawer, Button } from 'antd'; // added by Tommy (2021.06.26) 메뉴 정렬
 import RightMenu from './RightMenu'
 import './MenuBar.scss'
@@ -45,13 +46,13 @@ const MenuBar = () => {
               onClose={onClose}
               visible={visible}
             >
-               <Menu mode="inline">
-                <Menu.Item  key="sub2" icon={<LoginOutlined />} title="로그인">
-                  <a href='#'>로그인</a>
-                </Menu.Item>
-                <Menu.Item  key="sub3" icon={<UserAddOutlined />} title="회원가입">
-                <a href='#'>회원가입</a>
-                </Menu.Item>
+              <Menu mode="inline">
+                <Link to="/login">
+                  <Menu.Item  key="sub2" icon={<LoginOutlined />} title="로그인" >로그인</Menu.Item>
+                </Link>
+                <Link to="/join">
+                  <Menu.Item  key="sub3" icon={<UserAddOutlined />} title="회원가입" > 회원가입 </Menu.Item>
+                </Link>
               </Menu>
             </Drawer>
           </div>

@@ -38,7 +38,7 @@ const DetailPage = (props) => {
                 </div>
             </section>
         </>
-    )
-}
+  );
+};
 
 export default DetailPage;
