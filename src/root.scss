@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+:root{
+    --color-font: #f953c6;
+    --color-background: #f7bcc4;
+    --color-font-purple: rgb(187, 34, 201);
+    --color-box-shadow: #E684AE;
+    --color-img-shadow: #8e9eab;
+
+    --size-font-big: 36px;
+    --size-font-regular: 26px;
+    --size-font-small: 16px;
+
+    --font : "Jua", cursive;
+}
+body{
+    background-color: var(--color-background) !important;
+}
+.container{
+    box-sizing: border-box;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font);
+
+    .item{
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 15px 15px 36px -15px var(--color-box-shadow);
+        padding:100px;
+    }
+}

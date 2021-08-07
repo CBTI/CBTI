@@ -1,20 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
-:root{
-    --color-font: #f953c6;
-    --color-box-shadow: #E684AE;
-    --color-img-shadow: #8e9eab;
 
-    --size-font-big: 36px;
-    --size-font-regular: 26px;
-    --size-font-small: 16px;
-}
-.container{
+.cards__container{
     height: 100%;
     display: flex;
     justify-content: center;
 }
 
-.items{
+.cards__items{
     display: grid;
     grid-template-columns: repeat(2, minmax(400px, 1fr));
     grid-gap: 100px;
@@ -25,7 +16,7 @@
     font-family: 'Jua', cursive;
     text-align:center;
 
-    .item {
+    .card__item {
         display: inline-block;
         background-color: white;
         margin-bottom: 70px;
@@ -45,14 +36,14 @@
     }
 }
 @media screen and (max-width: 1090px){
-    .items{
+    .cards__items{
         grid-template-columns: 1fr;
         width:100%;
     }
 }
 
 
-.item{
+.card__item{
     transition: transform 300ms ease;
     
     &:hover{

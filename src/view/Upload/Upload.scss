@@ -1,50 +1,42 @@
-.upload__container{
-    width:100vw;
-    height:100vh;
+.upload__item{
+    position:relative;
+    background: white;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    .upload__item{
-        position:relative;
-        background: white;
+    width: 600px; 
+    padding: 100px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 36px -15px var(--color-box-shadow);
+    
+    .upload__item__div{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 600px; 
-        padding: 100px;
-        border-radius: 5px;
-        box-shadow: 15px 15px 36px -15px var(--color-box-shadow);
-        
-        .upload__item__div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: transform 300ms ease;
-            cursor: pointer;
+        transition: transform 300ms ease;
+        cursor: pointer;
 
-            & img{
-                z-index: 1;
-                position: relative;
-                top: 20px;
-                max-width: 100px;
-                max-height: 100px;
-            }
-            &:hover{
-                transform: translateY(-20px);
-            }
+        & img{
+            z-index: 1;
+            position: relative;
+            top: 20px;
+            max-width: 100px;
+            max-height: 100px;
+        }
+        &:hover{
+            transform: translateY(-20px);
         }
     }
-    .upload__item__button{
-        cursor: pointer;
-        border:none;
-        padding: 10px;
-        border-radius: 10px;
-        color:white;
-        background: #ee9ca7;
-        margin-right: 10px;
-        z-index: 2;
+}
+.upload__item__button{
+    cursor: pointer;
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    color:white;
+    background: #ee9ca7;
+    margin-right: 10px;
+    z-index: 2;
 
-    }
 }

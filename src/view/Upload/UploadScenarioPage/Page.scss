@@ -1,0 +1,19 @@
+.Page1__item{
+    width: 600px;
+}
+.Page2__item{
+    width: 700px;
+}
+.item{
+    flex-direction: column;
+}
+.ant-form{
+    width:100%;
+}
+.join__btnGroup{
+    display: flex;
+    justify-content: center;
+    & button {
+        margin-right: 10px;
+    }
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ResultPage.scss';
 import { useSelector } from 'react-redux';
 import HomeButton from '../../Component/HomeButton';
@@ -7,10 +7,17 @@ import Time from './Time'
 function ResultPage(props) {
     const Answer = useSelector(state => state.user.Answer)
     const question_id = useSelector(state => state.user.question_id)
+
+    useEffect(() => {
+        return () => {
+            sessionStorage.removeItem("startCount");
+            sessionStorage.removeItem("question_id");
+        }
+    }, [])
     return (
         <>
             <Menu/>
-            <div className="result__container">
+            <div className="container">
                 <div className="result__item">
                     <p className="item__result__title">ResultPage입니다</p>
                     <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpsERHChG0GkHahQz1z0Psx-8Zia4n58TmaQ&usqp=CAU'/>

@@ -1,29 +1,22 @@
-.result__container {
+.result__item {
+    margin-top: 50px;
+    padding: 50px;
+    background-color: white;
+    border-radius: 15px;
+    width: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-
-    .result__item {
-        margin-top: 50px;
-        padding: 50px;
-        background-color: white;
-        border-radius: 15px;
-        width: 700px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Jua', cursive;
-        color: var(--color-font);
-    }
-    .item__result__title{
-        font-size: var(--size-font-big); 
-    }
-    .item__result__Answer{
-        font-size: var(--size-font-regular); 
-    }
-    .item__result__Time{
-        font-size: var(--size-font-small); 
-    }
+    color: var(--color-font);
+}
+.item__result__title{
+    font-size: var(--size-font-big); 
+}
+.item__result__Answer{
+    font-size: var(--size-font-regular); 
+}
+.item__result__Time{
+    color: var(--color-font-purple);
+    font-size: var(--size-font-small); 
 }

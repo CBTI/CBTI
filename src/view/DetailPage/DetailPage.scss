@@ -9,13 +9,6 @@
     font-size: var(--size-font-regular); } 
   */
 
-.detail__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
 .detail__item {
   padding: 125px 50px 125px 50px;
   background-color: white;
@@ -31,7 +24,6 @@
 .detail__item__title,
 .detail__item__genre,
 .detail__item__summary {
-  font-family: "Jua", cursive;
   color: var(--color-font);
 }
 
@@ -40,10 +32,14 @@
 }
 
 .detail__item__genre {
+  border: 3px solid var(--color-font-purple);
+  color: var(--color-font-purple);
+  padding: 5px;
   font-size: var(--size-font-regular);
 }
 
 .detail__item__summary {
+  color: black;
   font-size: var(--size-font-small);
 }
 

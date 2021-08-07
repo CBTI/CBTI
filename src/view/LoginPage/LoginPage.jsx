@@ -123,11 +123,10 @@ const LoginForm = (props) => {
               offset: 8,
               span: 16,
             }}
-            style={{
-              display: "table",
-            }}
           >
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            {/* <div class="g-signin2" data-onsuccess="onSignIn">
+
+            </div> */}
             <div className="login__item__ButtonSpace">
               <div>
                 <Button
@@ -138,11 +137,6 @@ const LoginForm = (props) => {
                 >
                   로그인하기
                 </Button>
-                {/* <Link to="/GoogleLogin">
-                  <Button type="primary" size="large" icon={<GoogleOutlined />} style={{background:'#DF4A32', border:'none'}}>
-                    Google로 가입하기
-                  </Button>
-                </Link> */}
                 <GoogleLogin />
               </div>
               <div>

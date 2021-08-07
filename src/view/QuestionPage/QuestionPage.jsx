@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { questionData } from '../../data/questionData'
 import { actionCreators } from '../../redux/modules/user';
 import './QuestionPage.scss'
-
+import Progressbar from './Progressbar'
 
 function fadein(item) {
     item.style.opacity = "0";
@@ -62,7 +62,7 @@ const QuestionPage = memo((props) => {
 
     return (
         <>
-            <section className = "question__container">
+            <section className = "container">
                 <div className="item__question">
                     <ol className="item__question__list">
                         <div className="item__question__list__infomation">
@@ -70,17 +70,20 @@ const QuestionPage = memo((props) => {
                                 <HomeOutlined className="question__item__homebutton"/>
                             </Link>
                             <li className="item__question__title">{questionArray[MBTIIndex].name}</li>
-                            <li className="item__question__question">질문 : {questionArray[MBTIIndex].questions[questionIndex].question}</li>
-                            <li className="item__question__question">진행률 : {questionIndex + 1}/{endIndex}</li>
+                            <li className="item__question__title">질문 : {questionArray[MBTIIndex].questions[questionIndex].question}</li>
+                            <div className="item__question__progress">
+                                <span>진행률 : </span>
+                                <div className="item__question__progress__Bar">
+                                    <Progressbar count={questionIndex} length={endIndex-1}/>
+                                    {/* <span>{questionIndex + 1}/{endIndex}</span> */}
+                                </div>
+                            </div>
                         </div>
                         <div className="item__question__answer">
                             <li data-value='1' onClick={answerToQuestion}>1. {questionArray[MBTIIndex].questions[questionIndex].Answer[0]}</li>
                             <li data-value='2' onClick={answerToQuestion}>2. {questionArray[MBTIIndex].questions[questionIndex].Answer[1]}</li>
                             <li data-value='3' onClick={answerToQuestion}>3. {questionArray[MBTIIndex].questions[questionIndex].Answer[2]}</li>
                         </div>
-                        {
-                            
-                        }
                     </ol>
                 </div>
             </section>

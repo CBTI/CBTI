@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './DetailPage.scss'
 import MenuBar from '../menu/MenuBar';
 import { Button } from 'antd';
-import { RightCircleOutlined, LeftCircleOutlined } from '@ant-design/icons';
+import { RightCircleOutlined } from '@ant-design/icons';
 import BackButton from '../../Component/BackButton';
 import { useSelector } from 'react-redux';
 import { data } from '../../data/data';
@@ -25,7 +25,7 @@ const DetailPage = (props) => {
     return (
         <> 
             <MenuBar/>
-            <section className = "detail__container">
+            <section className = "container">
                 <div key={item[MBTIIndex].title + item[MBTIIndex].author}className="detail__item">
                     <img src={item[MBTIIndex].imgsrc} alt={item[MBTIIndex].title} title={item[MBTIIndex].title}/>
                     <h3 className="detail__item__title">{item[MBTIIndex].title} {item[MBTIIndex].testType}</h3>

@@ -41,7 +41,7 @@ const Cards = ({history}) =>  {
     const Getdata = (key, imgsrc, title, years, author, summary, detail_summary, link, testType) => {
         return (
             <>
-                <div key={key}className="item">
+                <div key={key}className="card__item">
                     <img onClick={() =>selectQuestion(key)} src={imgsrc} alt={title} title={title}/>                               {/* 이미지 클릭시 /detail-page로 이동 */}
                     <h3 className="item__title">{title} {testType}</h3>
                     {!checkMobileDevice() &&                                                    /* 모바일 화면이 아니라면 작가이름과 설명을 return */
@@ -66,8 +66,8 @@ const Cards = ({history}) =>  {
 
 
     return (                                    // 랜더링 안에 코드가 짧아지니 살짝 빨라진거같지 않습니까? 사실 저도 잘 모르겠습니다. 근데 가독성은 좋아보입니다.
-        <section className = "container">
-            <div className = "items"> 
+        <section className = "cards__container">
+            <div className = "cards__items"> 
             {CardObjects.map((v,i) =>{
                 return Getdata(
                     v.key,                          // 고쳐야할 점 : 각 Card컴포넌트의 고유한 키값이 index이면 좋지 않다. 해결방법을 찾아봐야할듯 
